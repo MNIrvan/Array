@@ -1,3 +1,70 @@
+Buat Output seperti di bawah ini: 
+        // 1,2,3,4,5,
+        // 1,2,3,4,5
+        // 1,3,5
+        // 5,3,1
+        // 2,4
+        // 1,1,3,2,5
+
+
+public class Main{ // deklarasi class main
+    public static void main(String[] args) { // deklarasi method main
+        //deklarasi dan inisialisasi 
+        int[] number =  new int [5]; // deklarasi array number dengan panjang integer di dalam array = 5
+        // inisialisasi
+        number [0]=1; // nilai array number di index 0 = 1
+        number [1]=2; // nilai array number di index 1 = 2
+        number [2]=3; // nilai array number di index 2 = 3
+        number [3]=4; // nilai array number di index 3 = 4
+        number [4]=5; // nilai array number di index 4 = 5
+         
+
+     Menambahi koma setelah angka dengan hasil output horizontal
+     for (int i = 0; i < number.length; i++) { // perulangan for dengan kondisi i < panjang array number
+         System.out.print(number[i] + ","); // cetak nilai array number di index i dan tambahkan koma
+
+
+    Menghilangkan koma setelah angka 5
+     for(int i = 0; i< number.length; i++){ // perulangan for dengan kondisi i < panjang array number
+         System.out.print(number[i]); // cetak nilai array number di index i
+         if (i < number.length -1)  { // kondisi jika i < panjang array number - 1
+         System.out.print(","); // cetak koma
+         System.out.print(number[i] + (i < number.length -1 ? "," : "")); // cetak nilai array number di index i dan tambahkan koma jika i < panjang array
+
+
+     Menampilkan angka 1,3,5
+     for (int i = 0; i < number.length; i++) { // perulangan for dengan kondisi i < panjang array number
+         if (i % 2 == 0) { // kondisi jika i % 2 == 0
+             System.out.print(number[i] + (i < number.length -1 ? "," : "")); // cetak nilai array number di index i dan tambahkan koma jika i < panjang array
+     }
+     }
+
+
+     Membuat output horizontal dengan urutan 5,3,1
+     for (int i = number.length - 1; i >= 0; i--) { // perulangan for dengan kondisi i lebih/sama denagn 0 dan i kurang/sama dengan panjang number array 
+         if(i % 2 == 0) { // kondisi jika i % 2 == 0
+             System.out.print(number[i]); // cetak nilai array number di index i
+             if(i>0){ // kondisi jika i lebih dari 0
+                 System.out.print(","); // cetak koma
+             }
+         }
+
+
+
+         Menampilkan output 2,4
+         System.out.print(number[1] + "," + number[3]); // cetak nilai array number di index 1 dan 3 dan tambahkan koma
+
+
+         Menampilkan output 1,1,3,2,5
+         System.out.println(number[0] + number[0] + number[2] + number[1] + number[4]); // cetak nilai array number di index 0,0,2,1,4 
+
+
+        
+        }
+    }
+
+
+
 public class Array{
 
     // Dasar Array
@@ -18,6 +85,10 @@ public class Array{
          System.out.println("\\nJumlah semua elemen: " + jumlah); // menampilkan jumlah semua elemen array + menampilkan value dari variabel jumlah
      }
 
+
+
+
+    <!------------ Latihan Array ------------->
 
 
     // Pencarian dalam Array

@@ -50,12 +50,7 @@ public class Main{
         // System.out.println(number[0] + number[0] + number[2] + number[1] + number[4]);
 
 
-        // buat output 1,2,3,4,5,
-        // 1,2,3,4,5
-        // 1,3,5
-        // 5,3,1
-        // 2,4
-        // 1,1,3,2,5
+        
         }
     }
 
