@@ -86,82 +86,82 @@ public class Array{
              }
          }
 
-         System.out.println("Hasil penjumlahan matriks: ");
-         for(int[] baris : hasil) {
-             for (int nilai : baris) {
-                 System.out.print(nilai + " ");
+         System.out.println("Hasil penjumlahan matriks: "); // menampilkan output "Hasil penjumlahan matriks: "
+         for(int[] baris : hasil) { // melakukan perulangan dan mendeklarasikan variabel baris sama dengan hasil
+             for (int nilai : baris) { // melakukan perulangan dan mendeklarasikan variabel nilai sama dengan baris
+                 System.out.print(nilai + " "); // menampilkan value dari variabel nilai dan spasi
              }
-             System.out.println();
+             System.out.println(); // menampilkan enter
          }
 
      }
 
 
 
-     public static void main(String[] args) {
-         String[] namaSiswa = {"dika", "ovi", "sarah", "una", "tata"};
-         int[][] nilai = {
+     public static void main(String[] args) { // membuat main method
+         String[] namaSiswa = {"dika", "ovi", "sarah", "una", "tata"}; // deklarasi array string dengan nama namaSiswa dan isi arraynya
+         int[][] nilai = { // deklarasi array 2D dengan nama nilai
              {80, 85, 90},  // Nilai dika
              {70, 75, 80},  // Nilai ovi
              {85, 80, 88},  // Nilai sarah
              {90, 85, 95},  // Nilai una
              {70, 75, 80}   // Nilai tata
          };
-         String[] mapel = {"Matematika", "Bahasa Inggris", "IPA"};
+         String[] mapel = {"Matematika", "Bahasa Inggris", "IPA"}; // deklarasi array string dengan nama mapel dan isi arraynya
 
          // Menghitung rata-rata per siswa
-         System.out.println("Rata-rata nilai per siswa: ");
-         for (int i = 0; i < nilai.length; i++) {
-             double total = 0;
-             for (int n : nilai[i]) {
-                 total += n;
+         System.out.println("Rata-rata nilai per siswa: "); // menampilkan output "Rata-rata nilai per siswa: "
+         for (int i = 0; i < nilai.length; i++) { // melakukan perulangan dan mendeklarasikan variabel i sama dengan 0, memberitahukan bahwa i lebih kecil dari panjang array nilai
+             double total = 0; // deklarasi variabel total dengan tipe data double dan nilai 0
+             for (int n : nilai[i]) { // melakukan perulangan dan mendeklarasikan variabel n sama dengan nilai array 2
+                 total += n; // total ditambahkan dengan nilai n
          }
-         double rataSiswa = total / nilai[i].length;
-         System.out.printf("%s: %.2f ", namaSiswa[i], rataSiswa);
+         double rataSiswa = total / nilai[i].length; // rataSiswa dihitung dengan cara membagi total dengan panjang array nilai
+         System.out.printf("%s: %.2f ", namaSiswa[i], rataSiswa); // menampilkan namaSiswa[i] dan rataSiswa dengan format %.2f (.2f) membatasi hasil format menjadi dua angka di belakang koma.
      }
 
      // Menghitung rata-rata per mata pelajaran
-     System.out.println("Rata-rata nilai per mata pelajaran: ");
-     for(int j = 0; j < nilai[0].length; j++) {
-         double total = 0;
-         for (int i = 0; i < nilai.length; i++) {
-             total += nilai[i][j];
+     System.out.println("Rata-rata nilai per mata pelajaran: "); // menampilkan output "Rata-rata nilai per mata pelajaran: "
+     for(int j = 0; j < nilai[0].length; j++) { // melakukan perulangan dan mendeklarasikan variabel j sama dengan 0, memberitahukan bahwa j lebih kecil dari panjang array nilai[0]
+         double total = 0; // deklarasi variabel total dengan tipe data double dan nilai 0
+         for (int i = 0; i < nilai.length; i++) { // melakukan perulangan dan mendeklarasikan variabel i sama dengan 0, member
+             total += nilai[i][j]; // total ditambahkan dengan nilai array 2D nilai[i][j]
          }
-         double rataMapel = total / nilai.length;
-         System.out.printf("%s: %.2f ", mapel[j], rataMapel);
+         double rataMapel = total / nilai.length; // rataMapel dihitung dengan cara membagi total dengan panjang array nilai
+         System.out.printf("%s: %.2f ", mapel[j], rataMapel); // menampilkan mapel[j] dan rataMapel dengan format %.2f (.2f) membatasi hasil format menjadi dua angka di belakang koma.
  }
  }
 
 
 
     // Permainan Tic-Tac-Toe
-    public static void main(String[] args) {
-        char[][] papan = new char[3][3];
+    public static void main(String[] args) { // membuat main method
+        char[][] papan = new char[3][3]; // deklarasi array 2D dengan nama papan dan isi arraynya
 
          Inisialisasi papan kosong
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                papan[i][j] = '-';
+        for (int i = 0; i < 3; i++) { // melakukan perulangan dan mendeklarasikan variabel i sama dengan 0, memberitahukan bahwa i lebih kecil dari 3
+            for (int j = 0; j < 3; j++) { // melakukan perulangan dan mendeklarasikan variabel j sama dengan 0, memberitahukan bahwa j lebih kecil dari 3
+                papan[i][j] = '-'; // papan[i][j] diinisialisasi dengan nilai '-'
             }
     }
 
     // Simulasi beberapa langkah
-    papan[0][0] = 'X';
-    papan[1][1] = 'O';
-    papan[2][2] = 'X';
+    papan[0][0] = 'X'; // papan[0][0] diinisialisasi dengan nilai 'X'
+    papan[1][1] = 'O'; // papan[1][1] diinisialisasi dengan nilai 'O'
+    papan[2][2] = 'X'; // papan[2][2] diinisialisasi dengan nilai 'X'
 
      // Tampilkan papan
-    System.out.println("Status Papan: ");
-    tampilkanPapan(papan);
+    System.out.println("Status Papan: "); // menampilkan output "Status Papan: "
+    tampilkanPapan(papan); // memanggil method tampilkanPapan dengan parameter papan
     
 }
 
-public static void tampilkanPapan(char[][] papan) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            System.out.print(papan[i][j] + " ");
+public static void tampilkanPapan(char[][] papan) { // membuat method tampilkanPapan dengan parameter papan
+    for (int i = 0; i < 3; i++) { // melakukan perulangan dan mendeklarasikan variabel i sama dengan 0, memberitahukan bahwa i lebih kecil dari 3
+        for (int j = 0; j < 3; j++) {  // melakukan perulangan dan mendeklarasikan variabel j sama dengan 0, memberitahukan bahwa j lebih kecil dari 3
+            System.out.print(papan[i][j] + " "); // menampilkan papan yang berisikan indeks[i], indeks[j] dengan tambahan spasi
         }
-        System.out.println();
+        System.out.println(); // menampilkan output baris baru
     }
 }
 }
